@@ -1,0 +1,65 @@
+.period {
+  --control-btn-size: 50px;
+  --control-gap: 20px;
+  --number-font: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: -50px;
+
+  @media (max-width: 768px) {
+    --control-btn-size: 40px;
+    --control-gap: 15px;
+    gap: 10px;
+  }
+
+  @media (max-width: 480px) {
+    --control-btn-size: 25px;
+    --control-gap: 10px;
+    --number-font: 12px;
+    position: absolute;
+    bottom: 35px;
+    left: 20px;
+    z-index: 10;
+  }
+
+  &__number {
+    color: var(--text-color);
+    font-size: var(--number-font);
+    font-variant-numeric: tabular-nums;
+  }
+
+  &__control {
+    display: flex;
+    gap: var(--control-gap);
+  }
+
+  &__button {
+    width: var(--control-btn-size);
+    height: var(--control-btn-size);
+    border-radius: 50%;
+    background: none;
+    border: 1px solid var(--period-circle);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+
+    @media (max-width: 480px) {
+      svg {
+        width: 6px;
+        height: 6px;
+      }
+    }
+
+    &:hover {
+      background-color: #fff;
+    }
+
+    &:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+  }
+}
