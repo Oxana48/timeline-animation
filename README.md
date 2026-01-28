@@ -33,5 +33,7 @@ git install
 
 3. Запустите проект:
 ```bash
-npm run dev
+npm start
 ```
+
+Приложение будет доступно по адресу http://localhost:3000
