@@ -3,10 +3,15 @@ import { useState } from "react";
 import "./CircularTimeline.scss";
 import { CircularTimelineProps } from "../../data/types";
 import titleline from "../../assets/png/title-line.png";
-
 import TimelineCircle from "../TimelineCircle/Timelinecircle";
 import PeriodInfo from "../PeriodInfo/PeriodInfo";
 import EventsSlider from "../EventsSlider/EventsSlider";
+
+export interface CircularTimelineProps {
+  periods: TimePeriod[];
+  initialActivePeriod?: number;
+  className?: string;
+}
 
 const CircularTimeline: React.FC<CircularTimelineProps> = ({
   periods,

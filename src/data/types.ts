@@ -14,8 +14,3 @@ export interface TimePeriod {
   events: TimelineEvent[];
 }
 
-export interface CircularTimelineProps {
-  periods: TimePeriod[];
-  initialActivePeriod?: number;
-  className?: string;
-}
